@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeckoMovement : MonoBehaviour
+public class SnakeMovement : MonoBehaviour
 {
-    public GameObject Gecko;
+    public GameObject Snake;
     public float Speed;
-    private float leftBound = -16;
+    private float leftBound = -18;
 
     private void Update()
     {
-        
-        if(transform.position.x >= leftBound)
+
+        if (transform.position.x >= leftBound)
         {
-            Gecko.transform.Translate(((Speed * -1)/100), 0, 0);
+            Snake.transform.Translate(((Speed * -1) / 100), 0, 0);
         }
         else
         {

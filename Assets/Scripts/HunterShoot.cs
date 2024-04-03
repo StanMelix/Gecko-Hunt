@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Shoot : MonoBehaviour
+public class HunterShoot : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform shootingPoint;
