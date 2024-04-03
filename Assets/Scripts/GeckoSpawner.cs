@@ -17,7 +17,6 @@ public class GeckoSpawner : MonoBehaviour
         if(Time.time > spawnTime)
         {
             timeBetweenSpawn = Random.Range(minSpawnTime, maxSpawnTime);
-            print(timeBetweenSpawn);
             Spawn();
             spawnTime = Time.time + timeBetweenSpawn;
         }
