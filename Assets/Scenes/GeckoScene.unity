@@ -286,8 +286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Snake: {fileID: 5503741126382466378, guid: af3d5210338a7854d9253fc5614de874, type: 3}
-  minY: -7.5
-  maxY: 7.5
+  minY: -6.5
+  maxY: 6.5
   minSpawnTime: 10
   maxSpawnTime: 14
 --- !u!4 &2064100055
