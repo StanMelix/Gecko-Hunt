@@ -18,6 +18,16 @@ public class SnakeMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        PlayerMovement hunter = collision.GetComponent<PlayerMovement>();
+
+        if (hunter != null)
+        {
+            hunter.TakeDamage(1);
+        }
+    }
+
     private void Update()
     {
 
