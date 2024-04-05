@@ -14,6 +14,6 @@ public class PlayerBounds : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -15f, -11f), Mathf.Clamp(transform.position.y, -4f, 4f), transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -12f, -11f), Mathf.Clamp(transform.position.y, -4.8f, 4.8f), transform.position.z);
     }
 }

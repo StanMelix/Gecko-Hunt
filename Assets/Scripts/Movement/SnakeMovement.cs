@@ -6,7 +6,17 @@ public class SnakeMovement : MonoBehaviour
 {
     public GameObject Snake;
     public float Speed;
-    private float leftBound = -18;
+    private float leftBound = -16;
+    public float health;
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Object.Destroy(this.gameObject);
+        }
+    }
 
     private void Update()
     {

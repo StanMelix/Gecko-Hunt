@@ -8,13 +8,12 @@ public class HunterShoot : MonoBehaviour
     // Start is called before the first frame update
     public Transform shootingPoint;
     public GameObject bullet;
-    public float bulletSpeed = 10;
+    public float bulletSpeed = 50;
+
     void Start()
     {
         
     }
-
-    
 
     // Update is called once per frame
     void Update()

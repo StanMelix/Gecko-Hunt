@@ -6,7 +6,17 @@ public class GeckoMovement : MonoBehaviour
 {
     public GameObject Gecko;
     public float Speed;
-    private float leftBound = -16;
+    private float leftBound = -15;
+    public float health;
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if(health <= 0)
+        {
+            Object.Destroy(this.gameObject);
+        }
+    }
 
     private void Update()
     {
