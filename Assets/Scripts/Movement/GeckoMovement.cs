@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class GeckoMovement : MonoBehaviour
 {
@@ -8,12 +10,22 @@ public class GeckoMovement : MonoBehaviour
     public float Speed;
     private float leftBound = -15;
     public float health;
+    private float tempscore = 0;
+    public TextMeshProUGUI displayScore;
+
+    void Start()
+    {
+        SetScoreText();
+    }
 
     public void TakeDamage(float damage)
     {
         health -= damage;
-        if(health <= 0)
+
+        if (health <= 0)
         {
+            tempscore += 1;
+            SetScoreText();
             Object.Destroy(this.gameObject);
         }
     }
@@ -26,6 +38,11 @@ public class GeckoMovement : MonoBehaviour
         {
             hunter.TakeDamage(1);
         }
+    }
+
+    void SetScoreText()
+    {
+        displayScore.text = "Score: " + tempscore.ToString();
     }
 
     private void Update()

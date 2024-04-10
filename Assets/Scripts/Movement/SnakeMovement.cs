@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class SnakeMovement : MonoBehaviour
 {
@@ -8,12 +10,15 @@ public class SnakeMovement : MonoBehaviour
     public float Speed;
     private float leftBound = -16;
     public float health;
+    public TextMeshProUGUI displayScore;
 
     public void TakeDamage(float damage)
     {
         health -= damage;
+
         if (health <= 0)
         {
+            //scoreSetter.setScore(10);
             Object.Destroy(this.gameObject);
         }
     }
