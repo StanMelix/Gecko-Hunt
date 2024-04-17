@@ -144,7 +144,7 @@ MonoBehaviour:
   Gecko: {fileID: 8467874957653890962}
   Speed: 1.5
   health: 1
-  displayScore: {fileID: 205902614241130766, guid: fd10461b392443c45bd3b5ad26b2409d, type: 3}
+  displayScore: {fileID: 643062461834306796, guid: fd10461b392443c45bd3b5ad26b2409d, type: 3}
 --- !u!61 &8467874957653890989
 BoxCollider2D:
   m_ObjectHideFlags: 0

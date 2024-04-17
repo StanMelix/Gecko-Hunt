@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletDealDamage : MonoBehaviour
 {
-    
     // Start is called before the first frame update
     void Start()
     {
