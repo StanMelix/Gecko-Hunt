@@ -10,12 +10,13 @@ public class GeckoMovement : MonoBehaviour
     public float Speed;
     private float leftBound = -15;
     public float health;
-    private float tempscore = 0;
-    public TextMeshProUGUI displayScore;
+    public Score score;
+    //private float tempscore = 0;
+    //public TextMeshProUGUI displayScore;
 
     void Start()
     {
-        SetScoreText();
+        //SetScoreText();
     }
 
     public void TakeDamage(float damage)
@@ -24,8 +25,9 @@ public class GeckoMovement : MonoBehaviour
 
         if (health <= 0)
         {
-            tempscore += 1;
-            SetScoreText();
+            //tempscore += 1;
+            //SetScoreText();
+            score.setScore(2);
             Object.Destroy(this.gameObject);
         }
     }
@@ -42,7 +44,8 @@ public class GeckoMovement : MonoBehaviour
 
     void SetScoreText()
     {
-        displayScore.text = "Score: " + tempscore.ToString();
+        //System.Console.WriteLine("Gecko is supposed to set score here");
+        //displayScore.text = "Score: This is a test" + tempscore.ToString();
     }
 
     private void Update()
