@@ -135,6 +135,8 @@ MonoBehaviour:
   Snake: {fileID: 5503741126382466378}
   Speed: 0.7
   health: 2
+  displayScore: {fileID: 0}
+  score: 10
 --- !u!114 &-2180568210675159258
 MonoBehaviour:
   m_ObjectHideFlags: 0

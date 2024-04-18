@@ -11,6 +11,7 @@ public class SnakeMovement : MonoBehaviour
     private float leftBound = -16;
     public float health;
     public TextMeshProUGUI displayScore;
+    public int score;
 
     public void TakeDamage(float damage)
     {
@@ -20,6 +21,7 @@ public class SnakeMovement : MonoBehaviour
         {
             //scoreSetter.setScore(10);
             Object.Destroy(this.gameObject);
+            ScoreManager.scoreCount += score;
         }
     }
 

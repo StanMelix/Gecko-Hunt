@@ -10,7 +10,7 @@ public class GeckoMovement : MonoBehaviour
     public float Speed;
     private float leftBound = -15;
     public float health;
-    public Score score;
+    public int score;
     //private float tempscore = 0;
     //public TextMeshProUGUI displayScore;
 
@@ -27,8 +27,8 @@ public class GeckoMovement : MonoBehaviour
         {
             //tempscore += 1;
             //SetScoreText();
-            score.setScore(2);
             Object.Destroy(this.gameObject);
+            ScoreManager.scoreCount += score;
         }
     }
 

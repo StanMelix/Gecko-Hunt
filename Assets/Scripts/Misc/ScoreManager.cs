@@ -2,23 +2,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Score : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public TextMeshProUGUI scoreText;
+    public Text scoreText;
     public GameObject bullet;
     public GameObject gecko;
     public GameObject snake;
-    public float score;
+    public static int scoreCount;
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score: yes" + score.ToString();
+        scoreText.text = "Score: " + Mathf.Round(scoreCount);
     }
 
-    public void setScore(float gain)
+    public void addScore(int points)
     {
-        score += gain;
+        scoreCount += points;
     }
 }
