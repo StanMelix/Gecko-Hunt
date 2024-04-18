@@ -10,6 +10,8 @@ public class HunterShoot : MonoBehaviour
     public GameObject bullet;
     public float bulletSpeed = 50;
 
+    [SerializeField] private ShootCooldown cooldown;
+
     void Start()
     {
         
@@ -20,8 +22,12 @@ public class HunterShoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (cooldown.IsCoolingDown) return;
+            
             var bullet1 = Instantiate(bullet, shootingPoint.position, transform.rotation);
             bullet1.GetComponent<Rigidbody2D>().velocity = shootingPoint.right * bulletSpeed;
+
+            cooldown.StartCooldown();
         }
     }
 }

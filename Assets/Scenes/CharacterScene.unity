@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 1902498125}
   - component: {fileID: 1902498126}
   - component: {fileID: 1902498127}
+  - component: {fileID: 1902498128}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -791,6 +792,8 @@ MonoBehaviour:
   shootingPoint: {fileID: 2096914643}
   bullet: {fileID: 1873283833691496089, guid: 2d7778969bbacd949abe59ae43fd020c, type: 3}
   bulletSpeed: 10
+  cooldown:
+    cooldownTime: 2
 --- !u!114 &1902498126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,6 +902,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8054409, y: 2.1772308}
   m_EdgeRadius: 0
+--- !u!114 &1902498128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902498118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0679938846e265a4e9d885a0411291bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2008191891
 GameObject:
   m_ObjectHideFlags: 0
