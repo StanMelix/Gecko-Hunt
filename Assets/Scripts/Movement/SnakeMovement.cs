@@ -19,7 +19,6 @@ public class SnakeMovement : MonoBehaviour
 
         if (health <= 0)
         {
-            //scoreSetter.setScore(10);
             Object.Destroy(this.gameObject);
             ScoreManager.scoreCount += score;
         }
