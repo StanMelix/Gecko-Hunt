@@ -38,11 +38,6 @@ public class GeckoMovement : MonoBehaviour
         }
     }
 
-    void SetScoreText()
-    {
-        //System.Console.WriteLine("Gecko is supposed to set score here");
-        //displayScore.text = "Score: This is a test" + tempscore.ToString();
-    }
 
     private void Update()
     {

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c4b9d8d9040490a45bc919c603e0e3cf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Ham: {fileID: 1923126926303948176, guid: 04778a51a0b307d4088a17fe1644a698, type: 3}
+  - rotHam: {fileID: 6819701245652684524, guid: d62cbcde07e717c4d8006506824dcc18, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
