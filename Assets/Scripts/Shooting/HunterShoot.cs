@@ -9,12 +9,13 @@ public class HunterShoot : MonoBehaviour
     public Transform shootingPoint;
     public GameObject bullet;
     public float bulletSpeed = 50;
+    public AudioSource rifleFire;
 
     [SerializeField] private ShootCooldown cooldown;
 
     void Start()
     {
-        
+        rifleFire = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class HunterShoot : MonoBehaviour
             
             var bullet1 = Instantiate(bullet, shootingPoint.position, transform.rotation);
             bullet1.GetComponent<Rigidbody2D>().velocity = shootingPoint.right * bulletSpeed;
+            rifleFire.Play();
 
             cooldown.StartCooldown();
         }

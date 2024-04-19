@@ -5,6 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class ShootCooldown
 {
+    private AudioSource bolting;
+
+    void Start()
+    {
+        
+    }
+
     [SerializeField] private float cooldownTime;
     private float nextFireTime;
 
