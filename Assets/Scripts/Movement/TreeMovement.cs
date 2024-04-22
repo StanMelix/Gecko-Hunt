@@ -6,7 +6,7 @@ public class TreeMovement : MonoBehaviour
 {
     public GameObject Tree;
     public float Speed;
-    private float leftBound = -17;
+    private float leftBound = -21;
 
     void Start()
     {

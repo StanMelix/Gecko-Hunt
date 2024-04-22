@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FruitMovement : MonoBehaviour
+public class FoodMovement : MonoBehaviour
 {
     public GameObject Fruit;
     public float Speed;
-    private float leftBound = -15;
+    private float leftBound = -18;
     public int score;
 
     void Start()

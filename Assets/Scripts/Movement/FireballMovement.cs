@@ -6,7 +6,7 @@ public class FireballMovement : MonoBehaviour
 {
     public GameObject Fireball;
     public float Speed;
-    private float leftBound = -16;
+    private float leftBound = -21;
 
     private void Update()
     {

@@ -8,7 +8,7 @@ public class GeckoMovement : MonoBehaviour
 {
     public GameObject Gecko;
     public float Speed;
-    private float leftBound = -15;
+    private float leftBound = -18;
     public float health;
     public int score;
 

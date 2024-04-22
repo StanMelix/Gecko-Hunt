@@ -1116,7 +1116,7 @@ MonoBehaviour:
   bulletSpeed: 10
   rifleFire: {fileID: 0}
   cooldown:
-    cooldownTime: 2
+    cooldownTime: 1.5
 --- !u!114 &1902498126
 MonoBehaviour:
   m_ObjectHideFlags: 0

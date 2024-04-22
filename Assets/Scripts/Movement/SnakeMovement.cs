@@ -8,7 +8,7 @@ public class SnakeMovement : MonoBehaviour
 {
     public GameObject Snake;
     public float Speed;
-    private float leftBound = -16;
+    private float leftBound = -20;
     public float health;
     public TextMeshProUGUI displayScore;
     public int score;
