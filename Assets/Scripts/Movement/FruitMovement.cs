@@ -18,8 +18,15 @@ public class FruitMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerMovement hunter = collision.GetComponent<PlayerMovement>();
+        BulletDealDamage bullet = collision.GetComponent<BulletDealDamage>();
 
         if (hunter != null)
+        {
+            Object.Destroy(this.gameObject);
+            ScoreManager.scoreCount += score;
+        }
+
+        if(bullet != null)
         {
             Object.Destroy(this.gameObject);
             ScoreManager.scoreCount += score;

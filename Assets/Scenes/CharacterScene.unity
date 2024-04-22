@@ -170,10 +170,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ham: {fileID: 1923126926303948176, guid: 04778a51a0b307d4088a17fe1644a698, type: 3}
   rotHam: {fileID: 6819701245652684524, guid: d62cbcde07e717c4d8006506824dcc18, type: 3}
-  minY: 0
-  maxY: 0
-  minSpawnTime: 0
-  maxSpawnTime: 0
+  minY: -4.5
+  maxY: 4.5
+  minSpawnTime: 8
+  maxSpawnTime: 12
 --- !u!114 &221446164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,8 +536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tree: {fileID: 5363219570495145718, guid: f4355026bc8610b4aa42b3c0e3d3f790, type: 3}
-  minY: -4.5
-  maxY: 4.5
+  minY: -4
+  maxY: 4
   minSpawnTime: 12
   maxSpawnTime: 15
 --- !u!4 &1197087292
