@@ -5,19 +5,15 @@ using UnityEngine;
 public class BackgroundSpawner : MonoBehaviour
 {
     public GameObject Background;
-    public float minSpawnTime;
-    public float maxSpawnTime;
-    private float timeBetweenSpawn;
+    public float spawnInc;
     private float spawnTime;
 
     private void Update()
     {
         if (Time.time > spawnTime)
         {
-            timeBetweenSpawn = Random.Range(minSpawnTime, maxSpawnTime);
-            print(timeBetweenSpawn);
             Spawn();
-            spawnTime = Time.time + timeBetweenSpawn;
+            spawnTime = Time.time + spawnInc;
         }
     }
 

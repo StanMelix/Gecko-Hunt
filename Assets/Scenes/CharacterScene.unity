@@ -382,10 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Background: {fileID: 2116596430364845815, guid: eafe105991e4f1645a78a977d89c3260, type: 3}
-  minY: 0
-  maxY: 0
-  minSpawnTime: 6.8
-  maxSpawnTime: 6.8
+  spawnInc: 6.8
 --- !u!1 &687391258
 GameObject:
   m_ObjectHideFlags: 0
