@@ -5,8 +5,6 @@ using UnityEngine;
 public class BackgroundSpawner : MonoBehaviour
 {
     public GameObject Background;
-    public float minY;
-    public float maxY;
     public float minSpawnTime;
     public float maxSpawnTime;
     private float timeBetweenSpawn;
@@ -25,7 +23,6 @@ public class BackgroundSpawner : MonoBehaviour
 
     void Spawn()
     {
-        float Y = Random.Range(minY, maxY);
-        Instantiate(Background, transform.position + new Vector3(0, Y, 0), transform.rotation);
+        Instantiate(Background, transform.position + new Vector3(0, 0, 0), transform.rotation);
     }
 }
