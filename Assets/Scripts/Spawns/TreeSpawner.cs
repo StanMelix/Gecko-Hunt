@@ -10,7 +10,7 @@ public class TreeSpawner : MonoBehaviour
     public float minSpawnTime;
     public float maxSpawnTime;
     private float timeBetweenSpawn;
-    private float spawnTime;
+    private float spawnTime = 16;
 
     private void Update()
     {

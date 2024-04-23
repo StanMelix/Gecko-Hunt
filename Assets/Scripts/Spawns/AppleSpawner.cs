@@ -11,7 +11,7 @@ public class AppleSpawner : MonoBehaviour
     public float minSpawnTime;
     public float maxSpawnTime;
     private float timeBetweenSpawn;
-    private float spawnTime;
+    private float spawnTime = 3;
     private int objToSpawn;
 
     private void Update()

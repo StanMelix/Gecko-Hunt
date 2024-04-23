@@ -10,7 +10,7 @@ public class GeckoSpawner : MonoBehaviour
     public float minSpawnTime;
     public float maxSpawnTime;
     private float timeBetweenSpawn;
-    private float spawnTime;
+    private float spawnTime = 2;
 
     private void Update()
     {
