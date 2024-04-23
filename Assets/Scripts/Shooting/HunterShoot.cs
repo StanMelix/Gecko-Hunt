@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.InputSystem;
 
 public class HunterShoot : MonoBehaviour
@@ -10,12 +11,20 @@ public class HunterShoot : MonoBehaviour
     public GameObject bullet;
     public float bulletSpeed = 50;
     public AudioSource rifleFire;
+    public float ammo;
+    public TextMeshProUGUI displayAmmo;
 
     [SerializeField] private ShootCooldown cooldown;
 
     void Start()
     {
         rifleFire = GetComponent<AudioSource>();
+        SetAmmoText();
+    }
+
+    void SetAmmoText()
+    {
+        displayAmmo.text = "Ammo: " + ammo.ToString();
     }
 
     // Update is called once per frame
@@ -28,6 +37,8 @@ public class HunterShoot : MonoBehaviour
             var bullet1 = Instantiate(bullet, shootingPoint.position, transform.rotation);
             bullet1.GetComponent<Rigidbody2D>().velocity = shootingPoint.right * bulletSpeed;
             rifleFire.Play();
+            ammo -= 1;
+            SetAmmoText();
 
             cooldown.StartCooldown();
         }
