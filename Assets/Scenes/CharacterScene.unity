@@ -191,7 +191,7 @@ MonoBehaviour:
   minY: -4.5
   maxY: 4.5
   minSpawnTime: 2
-  maxSpawnTime: 4
+  maxSpawnTime: 5
 --- !u!1 &237416872
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   Gecko: {fileID: 8467874957653890962, guid: 8a2d3df261dc37b42834b1e82760195e, type: 3}
   minY: -4.5
   maxY: 4.5
-  minSpawnTime: 1
+  minSpawnTime: 2
   maxSpawnTime: 3
 --- !u!4 &997421496
 Transform:
@@ -538,8 +538,8 @@ MonoBehaviour:
   Tree: {fileID: 5363219570495145718, guid: f4355026bc8610b4aa42b3c0e3d3f790, type: 3}
   minY: -3.4
   maxY: 3.4
-  minSpawnTime: 12
-  maxSpawnTime: 15
+  minSpawnTime: 16
+  maxSpawnTime: 20
 --- !u!4 &1197087292
 Transform:
   m_ObjectHideFlags: 0
