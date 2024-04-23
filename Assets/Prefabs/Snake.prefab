@@ -151,8 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mouth: {fileID: 4316758266680037611}
   Fireball: {fileID: 6871206731766679409, guid: 924b7c9772536f542b327bff8025c906, type: 3}
-  minShootTime: 3
-  maxShootTime: 5
+  minShootTime: 4
+  maxShootTime: 6
 --- !u!50 &6966423266989242631
 Rigidbody2D:
   serializedVersion: 4

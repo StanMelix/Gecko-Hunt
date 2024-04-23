@@ -29,7 +29,6 @@ public class FoodMovement : MonoBehaviour
         if(bullet != null)
         {
             Object.Destroy(this.gameObject);
-            ScoreManager.scoreCount += score;
         }
     }
 

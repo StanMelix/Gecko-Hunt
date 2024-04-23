@@ -537,7 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tree: {fileID: 5363219570495145718, guid: f4355026bc8610b4aa42b3c0e3d3f790, type: 3}
   minY: -3.4
-  maxY: -3.4
+  maxY: 3.4
   minSpawnTime: 12
   maxSpawnTime: 15
 --- !u!4 &1197087292
