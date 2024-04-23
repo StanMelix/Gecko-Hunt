@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundSpawner : MonoBehaviour
 {
     public GameObject Background;
-    public float spawnInc;
+    public float spawnIncrement;
     private float spawnTime;
 
     private void Update()
