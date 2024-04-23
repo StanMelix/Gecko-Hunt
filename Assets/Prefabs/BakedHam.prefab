@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fruit: {fileID: 1923126926303948176}
-  Speed: 0.5
+  Speed: 0.7
   score: 5

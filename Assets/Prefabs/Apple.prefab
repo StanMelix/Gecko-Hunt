@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fruit: {fileID: 2429442878602093036}
-  Speed: 0.5
+  Speed: 0.7
   score: 1
 --- !u!50 &7498674223452783325
 Rigidbody2D:
