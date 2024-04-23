@@ -10,7 +10,7 @@ public class SnakeSpawner : MonoBehaviour
     public float minSpawnTime;
     public float maxSpawnTime;
     private float timeBetweenSpawn;
-    private float spawnTime;
+    private float spawnTime = 10;
 
     private void Update()
     {
