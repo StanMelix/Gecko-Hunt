@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fireball: {fileID: 6871206731766679409}
-  Speed: 1.25
+  Speed: 1.5
 --- !u!60 &3438353406897127080
 PolygonCollider2D:
   m_ObjectHideFlags: 0
