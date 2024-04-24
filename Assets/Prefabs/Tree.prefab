@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1836437239cdd14ebf0a61dc3275403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tree: {fileID: 5363219570495145718}
+  Obstacle: {fileID: 5363219570495145718}
   Speed: 0.7
 --- !u!50 &8357360428243007080
 Rigidbody2D:

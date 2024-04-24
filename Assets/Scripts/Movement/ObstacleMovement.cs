@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeMovement : MonoBehaviour
+public class ObstacleMovement : MonoBehaviour
 {
-    public GameObject Tree;
+    public GameObject Obstacle;
     public float Speed;
     private float leftBound = -21;
 
@@ -30,7 +30,7 @@ public class TreeMovement : MonoBehaviour
 
         if (transform.position.x >= leftBound)
         {
-            Tree.transform.Translate(((Speed * -1) / 100), 0, 0);
+            Obstacle.transform.Translate(((Speed * -1) / 100), 0, 0);
         }
         else
         {
