@@ -13,7 +13,7 @@ public class BackgroundSpawner : MonoBehaviour
         if (Time.time > spawnTime)
         {
             Spawn();
-            spawnTime = Time.time + spawnInc;
+            spawnTime = Time.time + spawnIncrement;
         }
     }
 
