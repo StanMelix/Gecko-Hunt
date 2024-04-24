@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Background: {fileID: 2116596430364845815, guid: eafe105991e4f1645a78a977d89c3260, type: 3}
-  spawnInc: 6.8
+  spawnIncrement: 7
 --- !u!1 &687391258
 GameObject:
   m_ObjectHideFlags: 0
