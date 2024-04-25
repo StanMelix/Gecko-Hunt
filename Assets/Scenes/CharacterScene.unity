@@ -674,8 +674,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1197087292}
   - component: {fileID: 1197087291}
+  - component: {fileID: 1197087293}
   m_Layer: 0
-  m_Name: TreeSpawnPoint
+  m_Name: ObstacleSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -713,6 +714,23 @@ Transform:
   m_Father: {fileID: 1699888482}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1197087293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197087290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e5d4d5410b38a43979b733d2d104f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bush: {fileID: 3431748193483603158, guid: 30fe1194bf90fb445aa3256e02b57602, type: 3}
+  minY: -4.4
+  maxY: 4.4
+  minSpawnTime: 8
+  maxSpawnTime: 12
 --- !u!1 &1211208295
 GameObject:
   m_ObjectHideFlags: 0

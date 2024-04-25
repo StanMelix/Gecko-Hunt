@@ -18,14 +18,14 @@ public class BulletDealDamage : MonoBehaviour
         if(gecko != null)
         {
             gecko.TakeDamage(1);
+            Object.Destroy(this.gameObject);
         }
-        Object.Destroy(this.gameObject);
 
         if (snake != null)
         {
             snake.TakeDamage(1);
+            Object.Destroy(this.gameObject);
         }
-        Object.Destroy(this.gameObject);
     }
 
     // Update is called once per frame

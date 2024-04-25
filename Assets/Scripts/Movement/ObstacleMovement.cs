@@ -17,6 +17,7 @@ public class ObstacleMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerMovement hunter = collision.GetComponent<PlayerMovement>();
+        BulletDealDamage bullet = collision.GetComponent<BulletDealDamage>();
 
         if (hunter != null)
         {
