@@ -14,8 +14,10 @@ public class BulletDealDamage : MonoBehaviour
     {
         GeckoMovement gecko = collision.GetComponent<GeckoMovement>();
         SnakeMovement snake = collision.GetComponent<SnakeMovement>();
+        FireballMovement fireball = collision.GetComponent<FireballMovement>();
+        FoodMovement food = collision.GetComponent<FoodMovement>();
 
-        if(gecko != null)
+        if (gecko != null)
         {
             gecko.TakeDamage(1);
             Object.Destroy(this.gameObject);
@@ -24,6 +26,16 @@ public class BulletDealDamage : MonoBehaviour
         if (snake != null)
         {
             snake.TakeDamage(1);
+            Object.Destroy(this.gameObject);
+        }
+
+        if(fireball != null)
+        {
+            Object.Destroy(this.gameObject);
+        }
+
+        if (food != null)
+        {
             Object.Destroy(this.gameObject);
         }
     }
