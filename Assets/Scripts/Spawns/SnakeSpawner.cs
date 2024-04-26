@@ -11,15 +11,16 @@ public class SnakeSpawner : MonoBehaviour
     public float maxSpawnTime;
     private float timeBetweenSpawn;
     private float spawnTime = 10;
+    public AudioSource SnakeCry;
 
     private void Update()
     {
         if (Time.time > spawnTime)
         {
             timeBetweenSpawn = Random.Range(minSpawnTime, maxSpawnTime);
-            print(timeBetweenSpawn);
             Spawn();
             spawnTime = Time.time + timeBetweenSpawn;
+            SnakeCry.Play();
         }
     }
 
