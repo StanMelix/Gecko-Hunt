@@ -11,6 +11,7 @@ public class GeckoSpawner : MonoBehaviour
     public float maxSpawnTime;
     private float timeBetweenSpawn;
     private float spawnTime = 2;
+    public AudioSource GeckoCry;
 
     private void Update()
     {
@@ -19,6 +20,7 @@ public class GeckoSpawner : MonoBehaviour
             timeBetweenSpawn = Random.Range(minSpawnTime, maxSpawnTime);
             Spawn();
             spawnTime = Time.time + timeBetweenSpawn;
+            GeckoCry.Play();
         }
     }
 

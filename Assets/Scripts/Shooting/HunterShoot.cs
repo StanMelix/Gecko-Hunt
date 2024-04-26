@@ -33,10 +33,11 @@ public class HunterShoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (cooldown.IsCoolingDown) return;
-            
+            if (ammo <= 0) return;
+
+            rifleFire.Play();
             var bullet1 = Instantiate(bullet, shootingPoint.position, transform.rotation);
             bullet1.GetComponent<Rigidbody2D>().velocity = shootingPoint.right * bulletSpeed;
-            rifleFire.Play();
             ammo -= 1;
             SetAmmoText();
 
