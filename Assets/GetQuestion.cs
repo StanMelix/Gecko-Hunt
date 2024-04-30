@@ -11,7 +11,7 @@ public class GetQuestion : MonoBehaviour
     public TextMeshProUGUI answer3;
     public TextMeshProUGUI answer4;
     public TextMeshProUGUI timerText;
-    private float timer = 15;
+    public float newQTime;
     int rightANum = 0;
 
     string[,] QandA =
@@ -78,6 +78,7 @@ public class GetQuestion : MonoBehaviour
             Debug.Log("This is the wrong answer!");
         }
         setQandAText();
+        newQTime = 15;
     }
 
     public void Ans2Picked()
@@ -92,6 +93,7 @@ public class GetQuestion : MonoBehaviour
             Debug.Log("This is the wrong answer!");
         }
         setQandAText();
+        newQTime = 15;
     }
 
     public void Ans3Picked()
@@ -106,6 +108,7 @@ public class GetQuestion : MonoBehaviour
             Debug.Log("This is the wrong answer!");
         }
         setQandAText();
+        newQTime = 15;
     }
 
     public void Ans4Picked()
@@ -120,11 +123,28 @@ public class GetQuestion : MonoBehaviour
             Debug.Log("This is the wrong answer!");
         }
         setQandAText();
+        newQTime = 15;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(newQTime > 0)
+        {
+            newQTime -= Time.deltaTime;
+            UpdateTimer(newQTime);
+        }
+        else
+        {
+            setQandAText();
+            newQTime = 15;
+        }
+    }
+
+    void UpdateTimer(float currentTime)
+    {
+        currentTime += 1;
+        float seconds = Mathf.FloorToInt(currentTime % 60);
+        timerText.text = seconds.ToString();
     }
 }
