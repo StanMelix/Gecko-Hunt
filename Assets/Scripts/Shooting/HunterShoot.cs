@@ -11,13 +11,14 @@ public class HunterShoot : MonoBehaviour
     public GameObject bullet;
     public float bulletSpeed = 50;
     public AudioSource rifleFire;
-    public float ammo;
+    public static int ammo;
     public TextMeshProUGUI displayAmmo;
 
     [SerializeField] private ShootCooldown cooldown;
 
     void Start()
     {
+        ammo = 20;
         rifleFire = GetComponent<AudioSource>();
         SetAmmoText();
     }
@@ -43,5 +44,9 @@ public class HunterShoot : MonoBehaviour
 
             cooldown.StartCooldown();
         }
+    }
+    public static void increaseAmmo(int amount)
+    {
+        ammo += amount;
     }
 }
