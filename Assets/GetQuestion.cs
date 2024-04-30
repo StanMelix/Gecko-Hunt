@@ -10,11 +10,18 @@ public class GetQuestion : MonoBehaviour
     public TextMeshProUGUI answer2;
     public TextMeshProUGUI answer3;
     public TextMeshProUGUI answer4;
+    public TextMeshProUGUI timerText;
+    private float timer = 15;
     int rightANum = 0;
 
     string[,] QandA =
-    { {"Question 1", "A", "B", "C", "D"},
-    {"Question 2", "W", "X", "Y", "Z"} };
+    { {"On 26 March 2024, the container ship MV Dali struck which bridge in Baltimore, Maryland, causing it to collapse?",
+      "Francis Scott Key Bridge", "Robert E. Lee Bridge", "Akashi Kaikyo Bridge", "Golden Gate Bridge"},
+    {"How many states does the United States have?", "50", "13", "195", "500"},
+    {"What is the largest city in Europe?", "Istanbul", "Moscow", "London", "Paris"},
+    {"What product does NOT come from trees?", "Cloth", "Apple", "Sap", "Paper"},
+    {"What is the current national bank of the United States?", "Federal Reserve", "Bank of the United States", "Bank of America", "Capital One"},
+    {"Which of these Texas cities is NOT a college town?", "Loving", "College Station", "Austin", "Lubbock"}};
     int numQuestions;
 
     // Start is called before the first frame update
@@ -64,11 +71,13 @@ public class GetQuestion : MonoBehaviour
         if(rightANum == 1)
         {
             Debug.Log("This is the correct answer!");
+            ScoreManager.addScore(1);
         }
         else
         {
             Debug.Log("This is the wrong answer!");
         }
+        setQandAText();
     }
 
     public void Ans2Picked()
@@ -76,11 +85,13 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 2)
         {
             Debug.Log("This is the correct answer!");
+            ScoreManager.addScore(1);
         }
         else
         {
             Debug.Log("This is the wrong answer!");
         }
+        setQandAText();
     }
 
     public void Ans3Picked()
@@ -88,11 +99,13 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 3)
         {
             Debug.Log("This is the correct answer!");
+            ScoreManager.addScore(1);
         }
         else
         {
             Debug.Log("This is the wrong answer!");
         }
+        setQandAText();
     }
 
     public void Ans4Picked()
@@ -100,11 +113,13 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 4)
         {
             Debug.Log("This is the correct answer!");
+            ScoreManager.addScore(1);
         }
         else
         {
             Debug.Log("This is the wrong answer!");
         }
+        setQandAText();
     }
 
     // Update is called once per frame
