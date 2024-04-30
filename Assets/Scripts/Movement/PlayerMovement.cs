@@ -9,16 +9,17 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveInput;
-    public float health;
+    public static int health;
     public TextMeshProUGUI displayLives;
 
     // Start is called before the first frame update
     void Start()
     {
+        health = 3;
         SetLivesText();
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         SetLivesText();
@@ -40,5 +41,10 @@ public class PlayerMovement : MonoBehaviour
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
         rb.velocity = moveInput * moveSpeed;
+    }
+
+    public void setHealth(int amount)
+    {
+        health += amount;
     }
 }
