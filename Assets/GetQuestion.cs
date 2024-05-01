@@ -11,7 +11,9 @@ public class GetQuestion : MonoBehaviour
     public TextMeshProUGUI answer3;
     public TextMeshProUGUI answer4;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI totalTimeText;
     public float newQTime;
+    private float totalTime;
     int rightANum = 0;
 
     string[,] QandA =
@@ -71,7 +73,7 @@ public class GetQuestion : MonoBehaviour
         if(rightANum == 1)
         {
             Debug.Log("This is the correct answer!");
-            ScoreManager.addScore(1);
+            AwardPoints();
         }
         else
         {
@@ -86,7 +88,7 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 2)
         {
             Debug.Log("This is the correct answer!");
-            ScoreManager.addScore(1);
+            AwardPoints();
         }
         else
         {
@@ -101,7 +103,7 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 3)
         {
             Debug.Log("This is the correct answer!");
-            ScoreManager.addScore(1);
+            AwardPoints();
         }
         else
         {
@@ -116,7 +118,7 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 4)
         {
             Debug.Log("This is the correct answer!");
-            ScoreManager.addScore(1);
+            AwardPoints();
         }
         else
         {
@@ -132,13 +134,15 @@ public class GetQuestion : MonoBehaviour
         if(newQTime > 0)
         {
             newQTime -= Time.deltaTime;
-            UpdateTimer(newQTime);
+            totalTime += Time.deltaTime;
         }
         else
         {
             setQandAText();
             newQTime = 15;
         }
+        UpdateTimer(newQTime);
+        UpdateTotalTime(totalTime);
     }
 
     void UpdateTimer(float currentTime)
@@ -146,5 +150,22 @@ public class GetQuestion : MonoBehaviour
         currentTime += 1;
         float seconds = Mathf.FloorToInt(currentTime % 60);
         timerText.text = seconds.ToString();
+    }
+
+    void UpdateTotalTime(float currentTime)
+    {
+        currentTime += 1;
+        float seconds = Mathf.FloorToInt(currentTime % 60);
+        float minutes = Mathf.FloorToInt(currentTime / 60);
+        totalTimeText.text = "Total time: " + ((minutes * 60) + (seconds-1)).ToString();
+    }
+
+    void AwardPoints()
+    {
+        if (newQTime > 12) { ScoreManager.addScore(5); }
+        else if (newQTime > 9) { ScoreManager.addScore(4); }
+        else if (newQTime > 6) { ScoreManager.addScore(3); }
+        else if (newQTime > 3) { ScoreManager.addScore(2); }
+        else { ScoreManager.addScore(1); }
     }
 }

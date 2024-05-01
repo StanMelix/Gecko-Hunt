@@ -19,11 +19,13 @@ public class BuyPowerUps : MonoBehaviour
 
     public void BuyHealth()
     {
-        if(ScoreManager.getScore() >= 20)
+        if (ScoreManager.getScore() >= 20)
         {
-            PlayerMovement.health += 1;
-            ScoreManager.scoreCount -= 20;
-            displayLives.text = "Lives: " + PlayerMovement.health.ToString();
+            if (PlayerMovement.health < 3) {
+                PlayerMovement.health += 1;
+                ScoreManager.scoreCount -= 20;
+                displayLives.text = "Lives: " + PlayerMovement.health.ToString();
+            }
         }
     }
 }
