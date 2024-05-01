@@ -78,7 +78,7 @@ public class GetQuestion : MonoBehaviour
             Debug.Log("This is the wrong answer!");
         }
         setQandAText();
-        newQTime = 15;
+        newQTime = 1;
     }
 
     public void Ans2Picked()
@@ -147,4 +147,5 @@ public class GetQuestion : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
         timerText.text = seconds.ToString();
     }
+  
 }
