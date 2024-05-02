@@ -19,6 +19,7 @@ public class GetQuestion : MonoBehaviour
     public AudioSource SnakeCry;
     public AudioSource GeckoCry;
     private int objToSpawn;
+    public float QStartingTime;
     public float newQTime;
     private float totalTime;
     int rightANum = 0;
@@ -88,7 +89,7 @@ public class GetQuestion : MonoBehaviour
             Spawn();
         }
         setQandAText();
-        newQTime = 15;
+        newQTime = QStartingTime;
     }
 
     public void Ans2Picked()
@@ -104,7 +105,7 @@ public class GetQuestion : MonoBehaviour
             Spawn();
         }
         setQandAText();
-        newQTime = 15;
+        newQTime = QStartingTime;
     }
 
     public void Ans3Picked()
@@ -120,7 +121,7 @@ public class GetQuestion : MonoBehaviour
             Spawn();
         }
         setQandAText();
-        newQTime = 15;
+        newQTime = QStartingTime;
     }
 
     public void Ans4Picked()
@@ -136,7 +137,7 @@ public class GetQuestion : MonoBehaviour
             Spawn();
         }
         setQandAText();
-        newQTime = 15;
+        newQTime = QStartingTime;
     }
 
     // Update is called once per frame
@@ -150,10 +151,16 @@ public class GetQuestion : MonoBehaviour
         else
         {
             setQandAText();
-            newQTime = 15;
+            newQTime = QStartingTime;
             Spawn();
             Spawn();
         }
+        if(totalTime > 30) { QStartingTime = 14; }
+        if (totalTime > 60) { QStartingTime = 13; }
+        if (totalTime > 90) { QStartingTime = 12; }
+        if (totalTime > 120) { QStartingTime = 11; }
+        if (totalTime > 150) { QStartingTime = 10; }
+        if (totalTime > 180) { QStartingTime = 9; }
         UpdateTimer(newQTime);
         UpdateTotalTime(totalTime);
     }
