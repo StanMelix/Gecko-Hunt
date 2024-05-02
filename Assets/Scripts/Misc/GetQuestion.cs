@@ -12,6 +12,13 @@ public class GetQuestion : MonoBehaviour
     public TextMeshProUGUI answer4;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI totalTimeText;
+    public GameObject Snake;
+    public GameObject Gecko;
+    public GameObject Tree;
+    public GameObject ThornBush;
+    public AudioSource SnakeCry;
+    public AudioSource GeckoCry;
+    private int objToSpawn;
     public float newQTime;
     private float totalTime;
     int rightANum = 0;
@@ -78,6 +85,7 @@ public class GetQuestion : MonoBehaviour
         else
         {
             Debug.Log("This is the wrong answer!");
+            Spawn();
         }
         setQandAText();
         newQTime = 15;
@@ -93,6 +101,7 @@ public class GetQuestion : MonoBehaviour
         else
         {
             Debug.Log("This is the wrong answer!");
+            Spawn();
         }
         setQandAText();
         newQTime = 15;
@@ -108,6 +117,7 @@ public class GetQuestion : MonoBehaviour
         else
         {
             Debug.Log("This is the wrong answer!");
+            Spawn();
         }
         setQandAText();
         newQTime = 15;
@@ -123,6 +133,7 @@ public class GetQuestion : MonoBehaviour
         else
         {
             Debug.Log("This is the wrong answer!");
+            Spawn();
         }
         setQandAText();
         newQTime = 15;
@@ -140,6 +151,8 @@ public class GetQuestion : MonoBehaviour
         {
             setQandAText();
             newQTime = 15;
+            Spawn();
+            Spawn();
         }
         UpdateTimer(newQTime);
         UpdateTotalTime(totalTime);
@@ -168,4 +181,28 @@ public class GetQuestion : MonoBehaviour
         else if (newQTime > 3) { ScoreManager.addScore(2); }
         else { ScoreManager.addScore(1); }
     }
+
+    void Spawn()
+    {
+        objToSpawn = Random.Range(1, 5);
+        if(objToSpawn == 1)
+        {
+            Instantiate(Snake, new Vector3(21, Random.Range(-4.5f, 4.5f), 0), new Quaternion(0, 0, 0, 0));
+            SnakeCry.Play();
+        }
+        else if(objToSpawn == 2)
+        {
+            Instantiate(Gecko, new Vector3(21, Random.Range(-4.5f, 4.5f), 0), new Quaternion(0, 0, 0, 0));
+            GeckoCry.Play();
+        }
+        else if(objToSpawn == 3)
+        {
+            Instantiate(Tree, new Vector3(21, Random.Range(-3.4f, 3.4f), 0), new Quaternion(0, 0, 0, 0));
+        }
+        else
+        {
+            Instantiate(ThornBush, new Vector3(21, Random.Range(-4.4f, 4.4f), 0), new Quaternion(0, 0, 0, 0));
+        }
+    }
+
 }

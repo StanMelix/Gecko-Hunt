@@ -3,17 +3,7 @@ guid: 45da021db66f4b7478d66435415ab0bc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - question: {instanceID: 0}
-  - answer1: {instanceID: 0}
-  - answer2: {instanceID: 0}
-  - answer3: {instanceID: 0}
-  - answer4: {instanceID: 0}
-  - timerText: {instanceID: 0}
-  - Tree: {fileID: 5363219570495145718, guid: f4355026bc8610b4aa42b3c0e3d3f790, type: 3}
-  - ThornBush: {fileID: 3431748193483603158, guid: 30fe1194bf90fb445aa3256e02b57602, type: 3}
-  - Gecko: {fileID: 8467874957653890962, guid: 8a2d3df261dc37b42834b1e82760195e, type: 3}
-  - FireSnake: {fileID: 5503741126382466378, guid: af3d5210338a7854d9253fc5614de874, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
