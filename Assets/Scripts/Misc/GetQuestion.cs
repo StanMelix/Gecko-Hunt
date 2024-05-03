@@ -143,7 +143,23 @@ public class GetQuestion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(newQTime > 0)
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Ans1Picked();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Ans2Picked();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Ans3Picked();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Ans4Picked();
+        }
+        if (newQTime > 0)
         {
             newQTime -= Time.deltaTime;
             totalTime += Time.deltaTime;

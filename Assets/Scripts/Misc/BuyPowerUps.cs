@@ -28,4 +28,15 @@ public class BuyPowerUps : MonoBehaviour
             }
         }
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            BuyAmmo();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            BuyHealth();
+        }
+    }
 }
