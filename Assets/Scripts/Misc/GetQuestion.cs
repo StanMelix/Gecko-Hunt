@@ -87,6 +87,7 @@ public class GetQuestion : MonoBehaviour
         {
             Debug.Log("This is the wrong answer!");
             Spawn();
+            if (totalTime > 180) { Spawn(); }
         }
         setQandAText();
         newQTime = QStartingTime;
@@ -103,6 +104,7 @@ public class GetQuestion : MonoBehaviour
         {
             Debug.Log("This is the wrong answer!");
             Spawn();
+            if (totalTime > 180) { Spawn(); }
         }
         setQandAText();
         newQTime = QStartingTime;
@@ -119,6 +121,7 @@ public class GetQuestion : MonoBehaviour
         {
             Debug.Log("This is the wrong answer!");
             Spawn();
+            if (totalTime > 180) { Spawn(); }
         }
         setQandAText();
         newQTime = QStartingTime;
@@ -135,6 +138,7 @@ public class GetQuestion : MonoBehaviour
         {
             Debug.Log("This is the wrong answer!");
             Spawn();
+            if (totalTime > 180) { Spawn(); }
         }
         setQandAText();
         newQTime = QStartingTime;
@@ -170,6 +174,7 @@ public class GetQuestion : MonoBehaviour
             newQTime = QStartingTime;
             Spawn();
             Spawn();
+            if (totalTime > 180) { Spawn(); }
         }
         if(totalTime > 30) { QStartingTime = 14; }
         if (totalTime > 60) { QStartingTime = 13; }
@@ -177,6 +182,10 @@ public class GetQuestion : MonoBehaviour
         if (totalTime > 120) { QStartingTime = 11; }
         if (totalTime > 150) { QStartingTime = 10; }
         if (totalTime > 180) { QStartingTime = 9; }
+        if (totalTime > 210) { QStartingTime = 8; }
+        if (totalTime > 240) { QStartingTime = 7; }
+        if (totalTime > 270) { QStartingTime = 6; }
+        if (totalTime > 300) { QStartingTime = 5; }
         UpdateTimer(newQTime);
         UpdateTotalTime(totalTime);
     }
@@ -198,10 +207,10 @@ public class GetQuestion : MonoBehaviour
 
     void AwardPoints()
     {
-        if (newQTime > 12) { ScoreManager.addScore(5); }
-        else if (newQTime > 9) { ScoreManager.addScore(4); }
-        else if (newQTime > 6) { ScoreManager.addScore(3); }
-        else if (newQTime > 3) { ScoreManager.addScore(2); }
+        if (newQTime > QStartingTime * 0.8) { ScoreManager.addScore(5); }
+        else if (newQTime > QStartingTime * 0.6) { ScoreManager.addScore(4); }
+        else if (newQTime > QStartingTime * 0.4) { ScoreManager.addScore(3); }
+        else if (newQTime > QStartingTime * 0.2) { ScoreManager.addScore(2); }
         else { ScoreManager.addScore(1); }
     }
 
