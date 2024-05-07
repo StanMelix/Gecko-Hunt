@@ -8,6 +8,7 @@ public class FoodMovement : MonoBehaviour
     public float Speed;
     private float leftBound = -18;
     public int score;
+    public AudioSource eat;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class FoodMovement : MonoBehaviour
 
         if (hunter != null)
         {
+            eat.Play();
             Object.Destroy(this.gameObject);
             ScoreManager.scoreCount += score;
         }

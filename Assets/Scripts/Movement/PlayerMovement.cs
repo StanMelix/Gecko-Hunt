@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     public static int health;
     public TextMeshProUGUI displayLives;
+    public AudioSource hurt;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     {
         health -= damage;
         SetLivesText();
+        hurt.Play();
         if (health <= 0)
         {
             Object.Destroy(this.gameObject);

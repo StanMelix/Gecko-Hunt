@@ -70,22 +70,20 @@ public class GetQuestion : MonoBehaviour
 
         //Sets question + answer text.
         question.text = QandA[qNumber, 0];
-        answer1.text = QandA[qNumber, rand1];
-        answer2.text = QandA[qNumber, rand2];
-        answer3.text = QandA[qNumber, rand3];
-        answer4.text = QandA[qNumber, rand4];
+        answer1.text = "1) " + QandA[qNumber, rand1];
+        answer2.text = "2) " + QandA[qNumber, rand2];
+        answer3.text = "3) " + QandA[qNumber, rand3];
+        answer4.text = "4) " + QandA[qNumber, rand4];
     }
 
     public void Ans1Picked()
     {
         if(rightANum == 1)
         {
-            Debug.Log("This is the correct answer!");
             AwardPoints();
         }
         else
         {
-            Debug.Log("This is the wrong answer!");
             Spawn();
             if (totalTime > 180) { Spawn(); }
         }
@@ -97,12 +95,10 @@ public class GetQuestion : MonoBehaviour
     {
         if (rightANum == 2)
         {
-            Debug.Log("This is the correct answer!");
             AwardPoints();
         }
         else
         {
-            Debug.Log("This is the wrong answer!");
             Spawn();
             if (totalTime > 180) { Spawn(); }
         }
@@ -114,12 +110,10 @@ public class GetQuestion : MonoBehaviour
     {
         if (rightANum == 3)
         {
-            Debug.Log("This is the correct answer!");
             AwardPoints();
         }
         else
         {
-            Debug.Log("This is the wrong answer!");
             Spawn();
             if (totalTime > 180) { Spawn(); }
         }
@@ -131,12 +125,10 @@ public class GetQuestion : MonoBehaviour
     {
         if (rightANum == 4)
         {
-            Debug.Log("This is the correct answer!");
             AwardPoints();
         }
         else
         {
-            Debug.Log("This is the wrong answer!");
             Spawn();
             if (totalTime > 180) { Spawn(); }
         }
