@@ -21,7 +21,7 @@ public class GetQuestion : MonoBehaviour
     private int objToSpawn;
     public float QStartingTime;
     public float newQTime;
-    private float totalTime;
+    public static float totalTime;
     int rightANum = 0;
 
     string[,] QandA =
