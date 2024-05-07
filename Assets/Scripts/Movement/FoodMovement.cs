@@ -26,6 +26,7 @@ public class FoodMovement : MonoBehaviour
             eat.Play();
             Object.Destroy(this.gameObject);
             ScoreManager.scoreCount += score;
+            ScoreManager.totalScore += score;
         }
 
         if(bullet != null)

@@ -21,6 +21,7 @@ public class SnakeMovement : MonoBehaviour
         {
             Object.Destroy(this.gameObject);
             ScoreManager.scoreCount += score;
+            ScoreManager.totalScore += score;
         }
     }
 

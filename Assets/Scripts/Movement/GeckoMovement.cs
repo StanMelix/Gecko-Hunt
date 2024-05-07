@@ -25,6 +25,7 @@ public class GeckoMovement : MonoBehaviour
         {
             Object.Destroy(this.gameObject);
             ScoreManager.scoreCount += score;
+            ScoreManager.totalScore += score;
         }
     }
 

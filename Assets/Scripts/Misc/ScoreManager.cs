@@ -10,10 +10,12 @@ public class ScoreManager : MonoBehaviour
     public GameObject gecko;
     public GameObject snake;
     public static int scoreCount;
+    public static int totalScore;
 
     void Start()
     {
         scoreCount = 0;
+        totalScore = 0;
     }
 
     // Update is called once per frame
