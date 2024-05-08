@@ -18,10 +18,12 @@ public class GetQuestion : MonoBehaviour
     public GameObject ThornBush;
     public AudioSource SnakeCry;
     public AudioSource GeckoCry;
+    public static int questionsCorrect;
+    public static int questionsMissed;
+    public static float totalTime;
     private int objToSpawn;
     public float QStartingTime;
     public float newQTime;
-    public static float totalTime;
     int rightANum = 0;
 
     string[,] QandA =
@@ -81,11 +83,13 @@ public class GetQuestion : MonoBehaviour
         if(rightANum == 1)
         {
             AwardPoints();
+            questionsCorrect += 1;
         }
         else
         {
             Spawn();
             if (totalTime > 180) { Spawn(); }
+            questionsMissed += 1;
         }
         setQandAText();
         newQTime = QStartingTime;
@@ -96,11 +100,13 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 2)
         {
             AwardPoints();
+            questionsCorrect += 1;
         }
         else
         {
             Spawn();
             if (totalTime > 180) { Spawn(); }
+            questionsMissed += 1;
         }
         setQandAText();
         newQTime = QStartingTime;
@@ -111,11 +117,13 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 3)
         {
             AwardPoints();
+            questionsCorrect += 1;
         }
         else
         {
             Spawn();
             if (totalTime > 180) { Spawn(); }
+            questionsMissed += 1;
         }
         setQandAText();
         newQTime = QStartingTime;
@@ -126,11 +134,13 @@ public class GetQuestion : MonoBehaviour
         if (rightANum == 4)
         {
             AwardPoints();
+            questionsCorrect += 1;
         }
         else
         {
             Spawn();
             if (totalTime > 180) { Spawn(); }
+            questionsMissed += 1;
         }
         setQandAText();
         newQTime = QStartingTime;
@@ -167,6 +177,7 @@ public class GetQuestion : MonoBehaviour
             Spawn();
             Spawn();
             if (totalTime > 180) { Spawn(); }
+            questionsMissed += 1;
         }
         if(totalTime > 30) { QStartingTime = 14; }
         if (totalTime > 60) { QStartingTime = 13; }
