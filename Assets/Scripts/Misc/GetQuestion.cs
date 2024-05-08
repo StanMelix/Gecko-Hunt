@@ -36,7 +36,6 @@ public class GetQuestion : MonoBehaviour
     {"Which of these Texas cities is NOT a college town?", "Loving", "College Station", "Austin", "Lubbock"}};
     int numQuestions;
 
-    // Start is called before the first frame update
     void Start()
     {
         numQuestions = QandA.GetLength(0);
@@ -146,7 +145,6 @@ public class GetQuestion : MonoBehaviour
         newQTime = QStartingTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))

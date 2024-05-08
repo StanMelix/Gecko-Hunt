@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI displayLives;
     public AudioSource hurt;
 
-    // Start is called before the first frame update
     void Start()
     {
         health = 3;
@@ -37,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
         displayLives.text = "Lives: " + health.ToString();
     }
 
-    // Update is called once per frame
     void Update()
     {
         moveInput.y = Input.GetAxisRaw("Vertical");

@@ -12,11 +12,6 @@ public class GeckoMovement : MonoBehaviour
     public float health;
     public int score;
 
-    void Start()
-    {
-
-    }
-
     public void TakeDamage(float damage)
     {
         health -= damage;

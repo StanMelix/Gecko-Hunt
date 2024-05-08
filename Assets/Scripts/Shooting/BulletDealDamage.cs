@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class BulletDealDamage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GeckoMovement gecko = collision.GetComponent<GeckoMovement>();
@@ -40,7 +34,6 @@ public class BulletDealDamage : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(transform.position.x >= 15)

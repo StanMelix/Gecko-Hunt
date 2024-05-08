@@ -10,12 +10,6 @@ public class FoodMovement : MonoBehaviour
     public int score;
     public AudioSource eat;
 
-    void Start()
-    {
-
-    }
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerMovement hunter = collision.GetComponent<PlayerMovement>();

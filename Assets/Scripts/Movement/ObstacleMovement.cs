@@ -8,12 +8,6 @@ public class ObstacleMovement : MonoBehaviour
     public float Speed;
     private float leftBound = -21;
 
-    void Start()
-    {
-
-    }
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerMovement hunter = collision.GetComponent<PlayerMovement>();

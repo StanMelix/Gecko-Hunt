@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class HunterShoot : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Transform shootingPoint;
     public GameObject bullet;
     public float bulletSpeed = 50;
@@ -28,7 +27,6 @@ public class HunterShoot : MonoBehaviour
         displayAmmo.text = "Ammo: " + ammo.ToString();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

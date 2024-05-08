@@ -4,7 +4,6 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Text scoreText;
     public GameObject bullet;
     public GameObject gecko;
@@ -18,7 +17,6 @@ public class ScoreManager : MonoBehaviour
         totalScore = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
