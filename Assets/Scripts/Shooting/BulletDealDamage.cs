@@ -36,7 +36,7 @@ public class BulletDealDamage : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.x >= 15)
+        if(transform.position.x >= 18.5)
         {
             Object.Destroy(this.gameObject);
         }

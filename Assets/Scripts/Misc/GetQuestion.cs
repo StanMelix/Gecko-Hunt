@@ -87,7 +87,7 @@ public class GetQuestion : MonoBehaviour
         else
         {
             Spawn();
-            if (totalTime > 180) { Spawn(); }
+            if (totalTime > 180f) { Spawn(); }
             questionsMissed += 1;
         }
         setQandAText();
@@ -104,7 +104,7 @@ public class GetQuestion : MonoBehaviour
         else
         {
             Spawn();
-            if (totalTime > 180) { Spawn(); }
+            if (totalTime > 180f) { Spawn(); }
             questionsMissed += 1;
         }
         setQandAText();
@@ -121,7 +121,7 @@ public class GetQuestion : MonoBehaviour
         else
         {
             Spawn();
-            if (totalTime > 180) { Spawn(); }
+            if (totalTime > 180f) { Spawn(); }
             questionsMissed += 1;
         }
         setQandAText();
@@ -138,7 +138,7 @@ public class GetQuestion : MonoBehaviour
         else
         {
             Spawn();
-            if (totalTime > 180) { Spawn(); }
+            if (totalTime > 180f) { Spawn(); }
             questionsMissed += 1;
         }
         setQandAText();
@@ -172,7 +172,6 @@ public class GetQuestion : MonoBehaviour
         {
             setQandAText();
             newQTime = QStartingTime;
-            Spawn();
             Spawn();
             if (totalTime > 180) { Spawn(); }
             questionsMissed += 1;
