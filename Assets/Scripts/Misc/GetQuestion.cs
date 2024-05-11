@@ -33,7 +33,15 @@ public class GetQuestion : MonoBehaviour
     {"What is the largest city in Europe?", "Istanbul", "Moscow", "London", "Paris"},
     {"What product does NOT come from trees?", "Cloth", "Apple", "Sap", "Paper"},
     {"What is the current national bank of the United States?", "Federal Reserve", "Bank of the United States", "Bank of America", "Capital One"},
-    {"Which of these Texas cities is NOT a college town?", "Loving", "College Station", "Austin", "Lubbock"}};
+    {"Which of these Texas cities is NOT a college town?", "Loving", "College Station", "Austin", "Lubbock"},
+    {"Who was the dictator of Germany during World War II?", "Adolf Hitler", "Joseph Stalin", "Otto van Bismarck", "Hermann Goering"},
+    {"What is the capital city of Myanmar?", "Naypyidaw", "Phnom Penh", "Bangkok", "Vientiane"},
+    {"What is the capital city of Nicaragua?", "Managua", "San Salvador", "Recife", "Tegucigalpa"},
+    {"Which of the following is NOT a music term?", "Spaghetto", "Ritardando", "Decrescendo", "Fortissimo"},
+    {"What is 4*4?", "16", "1", "8", "69"},
+    {"Which of these languages is the most closely related to English?", "Persian", "Hebrew", "Arabic", "Turkish"},
+    {"Which of these countries was part of the Allies during World War II?", "Soviet Union", "Romania", "Hungary", "Italy"},
+    {"The McDonalds Filet-O-Fish was invented in 1962 to appeal to which religious demographic?", "Catholics", "Puritans", "Jews", "Baptists"}};
     int numQuestions;
 
     void Start()
