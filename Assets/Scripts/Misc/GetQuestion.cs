@@ -18,6 +18,7 @@ public class GetQuestion : MonoBehaviour
     public GameObject ThornBush;
     public AudioSource SnakeCry;
     public AudioSource GeckoCry;
+    public AudioSource BGMusic;
     public static int questionsCorrect;
     public static int questionsMissed;
     public static float totalTime;

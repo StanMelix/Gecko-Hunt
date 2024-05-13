@@ -7,6 +7,9 @@ public class BuyPowerUps : MonoBehaviour
 {
     public TextMeshProUGUI displayAmmo;
     public TextMeshProUGUI displayLives;
+    public AudioSource loadAmmo;
+    public AudioSource drinkPotion;
+
     public void BuyAmmo()
     {
         if (ScoreManager.getScore() >= 20)
@@ -14,6 +17,7 @@ public class BuyPowerUps : MonoBehaviour
             HunterShoot.increaseAmmo(20);
             ScoreManager.scoreCount -= 20;
             displayAmmo.text = "Ammo: " + HunterShoot.ammo.ToString();
+            loadAmmo.Play();
         }
     }
 
@@ -25,6 +29,7 @@ public class BuyPowerUps : MonoBehaviour
                 PlayerMovement.health += 1;
                 ScoreManager.scoreCount -= 20;
                 displayLives.text = "Lives: " + PlayerMovement.health.ToString();
+                drinkPotion.Play();
             }
         }
     }

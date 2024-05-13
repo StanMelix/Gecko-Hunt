@@ -11,6 +11,12 @@ public class LoseMenu : MonoBehaviour
     public TextMeshProUGUI displayTime;
     public TextMeshProUGUI displayCorrect;
     public TextMeshProUGUI displayMissed;
+    public AudioSource FailWhistle;
+
+    public void Start()
+    {
+        FailWhistle.Play();
+    }
 
     public void Update()
     {
@@ -22,7 +28,7 @@ public class LoseMenu : MonoBehaviour
     }
     public void setText()
     {
-        displayMessage.text = "You lose!";
+        displayMessage.text = "You lost, but you fought a good fight!";
         displayScore.text = "Total score: " + ScoreManager.totalScore;
         displayTime.text = "Total time: " + Mathf.Floor(GetQuestion.totalTime);
         displayCorrect.text = "Questions Correct: " + GetQuestion.questionsCorrect;
