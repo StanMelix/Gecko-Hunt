@@ -10,10 +10,10 @@ public class BackgroundSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time > spawnTime)
+        if (Time.timeSinceLevelLoad > spawnTime)
         {
             Spawn();
-            spawnTime = Time.time + spawnIncrement;
+            spawnTime = Time.timeSinceLevelLoad + spawnIncrement;
         }
     }
 

@@ -15,11 +15,11 @@ public class GeckoSpawner : MonoBehaviour
 
     private void Update()
     {
-        if(Time.time > spawnTime)
+        if(Time.timeSinceLevelLoad > spawnTime)
         {
             timeBetweenSpawn = Random.Range(minSpawnTime, maxSpawnTime);
             Spawn();
-            spawnTime = Time.time + timeBetweenSpawn;
+            spawnTime = Time.timeSinceLevelLoad + timeBetweenSpawn;
             GeckoCry.Play();
         }
     }
