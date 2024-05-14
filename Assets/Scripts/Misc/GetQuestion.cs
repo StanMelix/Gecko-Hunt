@@ -47,6 +47,7 @@ public class GetQuestion : MonoBehaviour
 
     void Start()
     {
+        totalTime = 0;
         numQuestions = QandA.GetLength(0);
         setQandAText();
     }
