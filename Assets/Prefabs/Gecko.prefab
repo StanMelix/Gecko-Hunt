@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gecko: {fileID: 8467874957653890962}
-  Speed: 2.5
+  Speed: 15
   health: 1
   score: 2
 --- !u!61 &8467874957653890989

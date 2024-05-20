@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fruit: {fileID: 1923126926303948176}
-  Speed: 1
+  Speed: 5
   score: 5
   eat: {fileID: -7818185903197994635}
 --- !u!82 &-7818185903197994635

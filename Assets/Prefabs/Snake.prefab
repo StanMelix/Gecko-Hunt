@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Snake: {fileID: 5503741126382466378}
-  Speed: 1.2
+  Speed: 8
   health: 2
   displayScore: {fileID: 0}
   score: 10

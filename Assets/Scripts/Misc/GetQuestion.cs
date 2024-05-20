@@ -16,6 +16,7 @@ public class GetQuestion : MonoBehaviour
     public GameObject Gecko;
     public GameObject Tree;
     public GameObject ThornBush;
+    public GameObject TimerBar;
     public AudioSource SnakeCry;
     public AudioSource GeckoCry;
     public AudioSource BGMusic;
@@ -48,8 +49,11 @@ public class GetQuestion : MonoBehaviour
     void Start()
     {
         totalTime = 0;
+        questionsCorrect = 0;
+        questionsMissed = 0;
         numQuestions = QandA.GetLength(0);
         setQandAText();
+        TimerBar.transform.localScale = new Vector3(1.335f, 1.43f, 1);
     }
 
     void setQandAText()
@@ -185,6 +189,7 @@ public class GetQuestion : MonoBehaviour
             Spawn();
             if (totalTime > 180) { Spawn(); }
             questionsMissed += 1;
+            TimerBar.transform.localScale = new Vector3(1.335f, 1.43f, 1);
         }
         if(totalTime > 30) { QStartingTime = 14; }
         if (totalTime > 60) { QStartingTime = 13; }
@@ -205,6 +210,8 @@ public class GetQuestion : MonoBehaviour
         currentTime += 1;
         float seconds = Mathf.FloorToInt(currentTime % 60);
         timerText.text = seconds.ToString();
+        float increment = 1.335f * seconds / QStartingTime;
+        TimerBar.transform.localScale = new Vector3(increment, 1.43f, 1);
     }
 
     void UpdateTotalTime(float currentTime)
@@ -212,7 +219,7 @@ public class GetQuestion : MonoBehaviour
         currentTime += 1;
         float seconds = Mathf.FloorToInt(currentTime % 60);
         float minutes = Mathf.FloorToInt(currentTime / 60);
-        totalTimeText.text = "Total time: " + ((minutes * 60) + (seconds-1)).ToString();
+        totalTimeText.text = "Time: " + ((minutes * 60) + (seconds-1)).ToString();
     }
 
     void AwardPoints()

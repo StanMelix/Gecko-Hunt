@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2157774183195819008}
   - component: {fileID: -2330399339239462174}
   - component: {fileID: -8328072242088975606}
-  - component: {fileID: -791307540160560016}
+  - component: {fileID: 93572856265941390}
   m_Layer: 0
   m_Name: RottenApple
   m_TagString: Untagged
@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fruit: {fileID: 8692740887668619351}
-  Speed: 1
+  Speed: 5
   score: -1
-  eat: {fileID: -791307540160560016}
+  eat: {fileID: 93572856265941390}
 --- !u!50 &-2330399339239462174
 Rigidbody2D:
   serializedVersion: 4
@@ -176,7 +176,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
---- !u!82 &-791307540160560016
+--- !u!82 &93572856265941390
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,7 +186,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3bd5e6a4018d6574288a8e1549554521, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4348f269046c0c44998041d6c9f80aa0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

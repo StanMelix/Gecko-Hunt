@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1877846962379522729}
   - component: {fileID: 7498674223452783325}
   - component: {fileID: -7959704464701672469}
-  - component: {fileID: 694708524666965323}
+  - component: {fileID: 8755583942502784788}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fruit: {fileID: 2429442878602093036}
-  Speed: 1
+  Speed: 5
   score: 1
-  eat: {fileID: 694708524666965323}
+  eat: {fileID: 8755583942502784788}
 --- !u!50 &7498674223452783325
 Rigidbody2D:
   serializedVersion: 4
@@ -176,7 +176,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
---- !u!82 &694708524666965323
+--- !u!82 &8755583942502784788
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,7 +186,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3bd5e6a4018d6574288a8e1549554521, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4164aa59c4054b245babb5475502d7f7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -10,6 +10,11 @@ public class FoodMovement : MonoBehaviour
     public int score;
     public AudioSource eat;
 
+    public void Start()
+    {
+        eat = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerMovement hunter = collision.GetComponent<PlayerMovement>();
@@ -32,7 +37,6 @@ public class FoodMovement : MonoBehaviour
 
     private void Update()
     {
-
         if (transform.position.x >= leftBound)
         {
             Fruit.transform.Translate(((Speed * -1) / 100), 0, 0);

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Obstacle: {fileID: 5363219570495145718}
-  Speed: 1
+  Speed: 5
 --- !u!50 &8357360428243007080
 Rigidbody2D:
   serializedVersion: 4

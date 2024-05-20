@@ -15,7 +15,8 @@ public class MainMenu : MonoBehaviour
     public GameObject backButton;
 
     public TextMeshProUGUI header;
-    public GameObject instructionsText;
+    public GameObject instructionsText1;
+    public GameObject instructionsText2;
     public GameObject creditsText;
 
     public void Start()
@@ -26,7 +27,8 @@ public class MainMenu : MonoBehaviour
         creditsButton.SetActive(true);
         quitButton.SetActive(true);
         backButton.SetActive(false);
-        instructionsText.SetActive(false);
+        instructionsText1.SetActive(false);
+        instructionsText2.SetActive(false);
         creditsText.SetActive(false);
         header.text = "";
     }
@@ -44,7 +46,8 @@ public class MainMenu : MonoBehaviour
         creditsButton.SetActive(false);
         quitButton.SetActive(false);
         backButton.SetActive(true);
-        instructionsText.SetActive(true);
+        instructionsText1.SetActive(true);
+        instructionsText2.SetActive(true);
         header.text = "HOW TO PLAY";
     }
 
@@ -68,7 +71,8 @@ public class MainMenu : MonoBehaviour
         creditsButton.SetActive(true);
         quitButton.SetActive(true);
         backButton.SetActive(false);
-        instructionsText.SetActive(false);
+        instructionsText1.SetActive(false);
+        instructionsText2.SetActive(false);
         creditsText.SetActive(false);
         header.text = "";
     }
